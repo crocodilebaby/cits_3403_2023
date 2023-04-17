@@ -1,3 +1,3 @@
-function relocate_sign() {
-    window.location.href="frontend/pages_signin.html";
-  }
+document.getElementById("sign_page").addEventListener("click", function() {
+    window.location.href = "page_sign.html";
+});
