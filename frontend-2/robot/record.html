@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat records</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>ul {
+        list-style: none; /* 去除默认的列表样式 */
+        padding-left: 0; /* 去除默认的左侧缩进 */
+      }
+      li {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333b3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+      li::before {
+        content: "•"; /* 添加小点点 */
+        margin-right: 5px; /* 调整小点点与文本之间的距离 */
+      }
+      </style>
+</head>
+    <body>
+       
+       
+       <!--<div class="text-box">
+            <textarea id="my-textarea" rows="10" cols="50">
+          
+                <div class="index333">
+                    <ul id="chat_record">
+
+                    </ul>
+                </div>
+             </textarea>
+      </div>--> 
+      <div class="wrap-left">
+        <a href="robot.html"> <img src="../asset/img2.png" class="people p-animtion" alt="people"> 
+        </a>
+         <!--<img src="../asset/img1.png" class="sphere s-animtion" alt="sphere">-->
+      </div>
+      <div class="wrap">
+      
+        <div class="header">
+          <h3>Chat records</h3>
+          
+        </div>
+        <!-- 中间 聊天内容区域 -->
+        <div class="main">
+           <!--<div class="index333">--> 
+                <ul id="chat_record" class="talk_list2">
+        
+                </ul>
+          
+            <!-- </div>-->
+        </div>
+         <!-- 底部 消息编辑区域 -->
+         <div class="footer2">
+           
+          </div>
+      </div>
+      </body>
+      <script>
+        let chatRecordUl = document.querySelector('#chat_record')
+    
+        // 读取本地存储中的聊天记录
+        function loadChatRecord() {
+          let chatRecord = localStorage.getItem('chatRecord')
+          if (chatRecord) {
+            chatRecord = JSON.parse(chatRecord)
+            chatRecord.forEach((record) => {
+              let li = document.createElement('li')
+              li.innerHTML = `
+                <span>${record.content}</span><br>
+                <span>${record.text}</span>
+              `
+              chatRecordUl.appendChild(li)
+            })
+          }
+        }
+    
+        // 加载聊天记录
+        loadChatRecord()
+      </script>
+</html>
+
+  

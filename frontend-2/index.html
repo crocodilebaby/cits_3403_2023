@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="left">
+            <img src="./asset/img2.png" class="people p-animtion" alt="people">
+            <img src="./asset/img1.png" class="sphere s-animtion" alt="sphere">
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="top-item">
+                    <span class="top-text">Home</span>
+                </div>
+                <div class="top-item">
+                   <a href="register.html"><span class="top-text">Register</span></a>
+                </div>
+             
+
+            </div>
+            <div class="form-wrappepr">
+               <!--<h1>Enter Our Plantform</h1>--> 
+               
+                <input type="text" class="inputs user" id="username" placeholder="Enter Email Or Number">
+                <small id="emailHelp" class="tips">The available account is <strong>admin</strong></small>
+
+                <input type="password" class="inputs pwd"  id="password" placeholder="Password">
+                <span class="tips">The available password is <strong>123456</strong></span>
+               <!--<button>Sigin In</button>--> 
+               <button type="submit" class="btn btn-primary" id="btnLogin">Submit</button>
+                <div class="other-login">
+                    <div class="divider">
+                        <span class="line"></span>
+                        <span class="divider-text">or continue with</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="other-login-wrapper">
+                        <div class="other-login-item">
+                            <img src="./asset/Git.png" alt="QQ">
+                        </div>
+                        <div class="other-login-item">
+                            <img src="./asset/Whatsapp.png" alt="WeChat">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="./lib/axios.js"></script>
+<script>
+    
+
+//Request method POST
+//Address http://www.liulongbin.top:3009/api/login
+//Parameter: username username password password==>Request body parameter, written in data
+//Steps
+
+//  1.  Register click for button
+//  2.  Obtain the value of the input box==>value attribute
+//  3.  Use axios to send requests, and then prompt based on the response results
+
+    // 1. 
+    document.querySelector('#btnLogin').addEventListener('click', function () {
+      // 2. 
+      let username = document.querySelector('#username').value
+      let password = document.querySelector('#password').value
+      console.log(username, password)
+
+      // 3. 
+      axios({
+        method: 'post', //Posts can be written in both uppercase and lowercase
+        url: 'http://www.liulongbin.top:3009/api/login',
+        data: {
+          //Abbreviation of Object Properties
+          username,
+          password
+        }
+      }).then(({ data: res }) => {
+    //Request successful
+
+        console.log(res)//The data returned by the res server response
+
+       //200 is the business status code (not written dead, as seen from the response body data)
+        if (res.code === 200) {
+     //Login successful
+          alert('Congratulations, you have successfully logged in. You will be redirected to the chat interface later')
+          location.href = './robot/robot.html'
+        } else {
+      //Login failed
+          alert('Login failed')
+        }
+      })
+    })
+
+
+    document.querySelector(".people").addEventListener('animationend', function () {
+        this.classList.remove('p-animtion');
+        this.classList.add('p-other-animtion')
+    });
+    document.querySelector(".sphere").addEventListener('animationend', function () {
+        this.classList.remove('s-animtion');
+        this.classList.add('s-other-animtion')
+    });	
+
+</script>
+
+</html>
