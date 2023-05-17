@@ -90,7 +90,8 @@ function saveChatRecord(content, text) {
     //Send an Ajax request to retrieve what the robot says
       axios({
         method: 'get',
-        url: 'http://www.liulongbin.top:3006/api/robot',
+        // bot api
+        url: '/robot/',
         params: {
           spoken: content
         }
