@@ -33,6 +33,7 @@ We use MongoDB as our database to store user account information and chat logs.
 
 ### Note
 Ensure that your MongoDB database is running, and that the connection details in your Flask application are set correctly.
+
 ## Tests of the application
 
 Testing is an essential part of our application development process to ensure the functionality and reliability of our chatbot application. Here are some ways we test our application:
@@ -46,4 +47,7 @@ To run unit tests, navigate to the project root directory and run the following 
 ```shell
 python -m unittest discover tests
 ```
+### System Tests
+
+We perform system tests manually to ensure that all parts of our application work together as expected. This includes testing the user registration, login, chatbot interaction, and chat log review and search functionalities.
 ## Contributions
