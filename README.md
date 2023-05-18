@@ -22,13 +22,13 @@ We use MongoDB as our database to store user account information and chat logs.
 ### Environment Setup
 1. Install Python and pip (Python Package Installer).
 2. Clone the project to your local machine:
-‘git clone https://github.com/yourusername/cits_3403_2023.git’
+`git clone https://github.com/yourusername/cits_3403_2023.git`
 3. Navigate to the project root directory and install the required dependencies:
-‘pip install -r requirements.txt’
+`pip install -r requirements.txt`
 
 ### Starting the Application
 1. To start the back-end server, run the following command in the project root directory:
-‘flask run’
+`flask run`
 3. For the front-end, open the `index.html` file in a web browser.
 
 ### Note
