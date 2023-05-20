@@ -30,7 +30,7 @@ git clone https://github.com/yourusername/cits_3403_2023.git
  xxx= gpt_api
 `
 ```
-export OPENAI_API_KEY="xxx
+export OPENAI_API_KEY="xxx"
 ```
 
 4. Navigate to the project root directory and install the required dependencies:
@@ -58,3 +58,5 @@ Ensure that your MongoDB database is running, and that the connection details in
 We perform system tests manually to ensure that all parts of our application work together as expected. This includes testing the user registration, login, chatbot interaction, and chat log review.
 
 ## Contributions
+
+Rongjin Chen: normal uwa student who struggle with computer science 
