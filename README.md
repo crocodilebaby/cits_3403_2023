@@ -21,6 +21,8 @@ We use MongoDB as our database to store user account information and chat logs.
 
 
 ## Tests of the application
-
+    first setting gpt api using below command line
+    export OPENAI_API_KEY="xxx"
+    xxx= gpt_api
 
 ## Contributions
