@@ -18,5 +18,9 @@ The back-end uses the Flask framework to handle requests sent from the front-end
 We use MongoDB as our database to store user account information and chat logs.
 
 ## How to launch the application?
+
+
 ## Tests of the application
+
+
 ## Contributions

@@ -38,7 +38,8 @@ $(function () {
   function getMsg(text) {
     $.ajax({
       method: 'GET',
-      url: 'http://www.liulongbin.top:3006/api/robot',
+      //  chat api
+      url: 'bot',
       data: {
         spoken: text
       },
@@ -52,23 +53,6 @@ $(function () {
           resetui()
  //Call the getVoice function to convert text into speech
           getVoice(msg)
-        }
-      }
-    })
-  }
-//Convert text to speech for playback
-  function getVoice(text) {
-    $.ajax({
-      method: 'GET',
-      url: 'http://www.liulongbin.top:3006/api/synthesize',
-      data: {
-        text: text
-      },
-      success: function (res) {
-        // console.log(res)
-        if (res.status === 200) {
-         //Play voice
-          $('#voice').attr('src', res.voiceUrl)
         }
       }
     })
