@@ -38,8 +38,7 @@ export OPENAI_API_KEY="xxx
 
 ### Starting the Application
 1. To start the back-end server, run the following command in the project root directory:
-```
-flask run
+```flask run
 ```
 3. For the front-end, open the `localhost/5000` in a web browser.
 
@@ -47,8 +46,9 @@ flask run
 Ensure that your MongoDB database is running, and that the connection details in your Flask application are set correctly.
 
 ## Test of the application
-
-![login page](readme//%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.05.37.png)
+![login page](readme/%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.06.03.png)
+![register page](readme/%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.06.10.png)
+![bot page](readme//%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.05.37.png)
 
 ### System Tests
 
