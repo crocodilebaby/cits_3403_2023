@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+</head>
+
+<body>
+    <div class="content">
+        <div class="left">
+            <img src="{{ url_for('static', filename='asset/img2.png') }}" class="people p-animtion" alt="people">
+            <img src="{{ url_for('static', filename='asset/img1.png') }}" class="sphere s-animtion" alt="sphere">
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="top-item">
+                    <span class="top-text">Home</span>
+                </div>
+                <div class="top-item">
+                    <a href="{{ url_for('register') }}"><span class="top-text">Register</span></a>
+                </div>
+            </div>
+            <div class="form-wrappepr">
+                <!--<h1>Enter Our Plantform</h1>-->
+
+                <input type="text" class="inputs user" id="username" placeholder="Enter Email Or Number" required>
+                <small id="emailHelp" class="tips">The available account is <strong>admin</strong></small>
+
+                <input type="password" class="inputs pwd" id="password" placeholder="Password" required>
+
+                <!--<button>Sigin In</button>-->
+                <button type="submit" class="btn btn-primary" id="btnLogin">Submit</button>
+                <div class="other-login">
+                    <div class="divider">
+                        <span class="line"></span>
+                        <span class="divider-text">or continue with</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="other-login-wrapper">
+                        <div class="other-login-item">
+                            <img src="{{ url_for('static', filename='asset/Git.png') }}" alt="QQ">
+                        </div>
+                        <div class="other-login-item">
+                            <img src="{{ url_for('static', filename='asset/Whatsapp.png') }}" alt="WeChat">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='lib/axios.js') }}"></script>
+<script>
+    document.querySelector('#btnLogin').addEventListener('click', function () {
+        let username = document.querySelector('#username').value
+        // let email = document.querySelector('#email').value
+        let password = document.querySelector('#password').value
+
+        axios({
+            method: 'post',
+            // changes api
+            url: "{{ url_for('login') }}",
+            data: {
+                username,
+                // email,
+                password
+            }
+        }).then(({ data: res }) => {
+            if (res.code === 200) {
+                // Redirect to login page
+                location.href = "{{ url_for('robot') }}";
+            } else {
+                alert(res.msg)
+            }
+        })
+    })
+</script>
