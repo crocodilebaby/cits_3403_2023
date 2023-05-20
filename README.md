@@ -3,7 +3,7 @@
 Our project is going to make a chatbot web application with multiple functions to our users including:
 1) login and sign up with username and password
 2) chat with chatbot interactively
-3) review and search the chat log
+3) review the chat log
 
 ## The architecture our web application
 Our web application mainly consists of a front-end and a back-end.
@@ -23,34 +23,25 @@ We use MongoDB as our database to store user account information and chat logs.
 1. Install Python and pip (Python Package Installer).
 2. Clone the project to your local machine:
 `git clone https://github.com/yourusername/cits_3403_2023.git`
-3. Navigate to the project root directory and install the required dependencies:
+3. Setting the environment variable for gpt api:
+`export OPENAI_API_KEY="xxx`
+```
+ xxx= gpt_api
+```
+4. Navigate to the project root directory and install the required dependencies:
 `pip install -r requirements.txt`
 
 ### Starting the Application
 1. To start the back-end server, run the following command in the project root directory:
 `flask run`
-3. For the front-end, open the `index.html` file in a web browser.
+3. For the front-end, open the `localhost/5000` in a web browser.
 
 ### Note
 Ensure that your MongoDB database is running, and that the connection details in your Flask application are set correctly.
 
-## Tests of the application
+## Test of the application
 
-Testing is an essential part of our application development process to ensure the functionality and reliability of our chatbot application. Here are some ways we test our application:
-
- first setting virtual environment using below command line
-    
-    ```s
-    pip3 install -r requirements.txt
-    ```
-then setting the environment variable for gpt api
-   
-    ```
-    export OPENAI_API_KEY="xxx"
-    ```
-    ```
-    xxx= gpt_api
-    ```
+![login page](../Desktop/%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.06.03.png)
 
 ### System Tests
 
