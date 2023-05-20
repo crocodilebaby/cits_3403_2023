@@ -22,18 +22,25 @@ We use MongoDB as our database to store user account information and chat logs.
 ### Environment Setup
 1. Install Python and pip (Python Package Installer).
 2. Clone the project to your local machine:
-```git clone https://github.com/yourusername/cits_3403_2023.git```
+```
+git clone https://github.com/yourusername/cits_3403_2023.git
+```
 3. Setting the environment variable for gpt api:
-```export OPENAI_API_KEY="xxx```
+```
+export OPENAI_API_KEY="xxx
+```
 `
  xxx= gpt_api
 `
 4. Navigate to the project root directory and install the required dependencies:
-```pip install -r requirements.txt```
+```pip install -r requirements.txt
+```
 
 ### Starting the Application
 1. To start the back-end server, run the following command in the project root directory:
-`flask run`
+```
+flask run
+```
 3. For the front-end, open the `localhost/5000` in a web browser.
 
 ### Note
@@ -41,7 +48,7 @@ Ensure that your MongoDB database is running, and that the connection details in
 
 ## Test of the application
 
-![login page]()
+![login page](readme//%E6%88%AA%E5%B1%8F2023-05-20%20%E4%B8%8B%E5%8D%885.05.37.png)
 
 ### System Tests
 
