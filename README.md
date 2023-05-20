@@ -26,19 +26,22 @@ We use MongoDB as our database to store user account information and chat logs.
 git clone https://github.com/yourusername/cits_3403_2023.git
 ```
 3. Setting the environment variable for gpt api:
-```
-export OPENAI_API_KEY="xxx
-```
 `
  xxx= gpt_api
 `
+```
+export OPENAI_API_KEY="xxx
+```
+
 4. Navigate to the project root directory and install the required dependencies:
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 ```
 
 ### Starting the Application
 1. To start the back-end server, run the following command in the project root directory:
-```flask run
+```
+flask run
 ```
 3. For the front-end, open the `localhost/5000` in a web browser.
 
