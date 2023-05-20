@@ -41,6 +41,7 @@ Testing is an essential part of our application development process to ensure th
  first setting gpt api using below command line
     ```
     export OPENAI_API_KEY="xxx"
+    ```
     xxx= gpt_api
     ```
     
