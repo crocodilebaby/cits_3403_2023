@@ -38,24 +38,22 @@ Ensure that your MongoDB database is running, and that the connection details in
 
 Testing is an essential part of our application development process to ensure the functionality and reliability of our chatbot application. Here are some ways we test our application:
 
- first setting gpt api using below command line
+ first setting virtual environment using below command line
+    
+    ```shell 
+    pip3 install -r requirements.txt
     ```
+then setting the environment variable for gpt api
+   
+    ```shell
     export OPENAI_API_KEY="xxx"
+    ```
     ```
     xxx= gpt_api
     ```
-    
 
-### Unit Tests
-
-We have unit tests in place for both our front-end and back-end components. For front-end JavaScript code, we use Jest to test individual functions and user interface components. For back-end Python code, we use the built-in `unittest` module in Python.
-
-To run unit tests, navigate to the project root directory and run the following command:
-
-```shell
-python -m unittest discover tests
-```
 ### System Tests
 
-We perform system tests manually to ensure that all parts of our application work together as expected. This includes testing the user registration, login, chatbot interaction, and chat log review and search functionalities.
+We perform system tests manually to ensure that all parts of our application work together as expected. This includes testing the user registration, login, chatbot interaction, and chat log review.
+
 ## Contributions
