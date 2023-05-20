@@ -40,12 +40,12 @@ Testing is an essential part of our application development process to ensure th
 
  first setting virtual environment using below command line
     
-    ```shell 
+    ```s
     pip3 install -r requirements.txt
     ```
 then setting the environment variable for gpt api
    
-    ```shell
+    ```
     export OPENAI_API_KEY="xxx"
     ```
     ```
